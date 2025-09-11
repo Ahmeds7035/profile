@@ -63,7 +63,6 @@
     .contacts,
     .list,
     .rich,
-    .qr-note,
     footer {
         opacity: 0;
         transform: translateY(20px);
@@ -74,7 +73,6 @@
     .contacts.is-visible,
     .list.is-visible,
     .rich.is-visible,
-    .qr-note.is-visible,
     footer.is-visible {
         opacity: 1;
         transform: translateY(0);
@@ -297,13 +295,6 @@
     }
     .fact strong { display: block; font-size: 16px; }
     .fact span { display: block; color: var(--muted); font-size: 12px; line-height: 1.3; }
-    .qr-note {
-      margin-top: 18px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 12px;
-      line-height: 1.6;
-    }
     footer { margin-top: 24px; padding: 12px; text-align: center; color: var(--muted); font-size: 12px; }
     .ico { width: 18px; height: 18px; display: inline-block; vertical-align: middle; stroke-width: 1.5; }
     @media (max-width: 460px) {
@@ -436,8 +427,6 @@
       </div>
     </div>
 
-    <p class="qr-note">This single-page layout is compact and mobile-friendly — ideal to encode into a QR code (keep file small: no external images).<br>To embed a real logo: either paste a direct image URL or upload the logo file (SVG/PNG). I can also generate a QR PNG that links to this page/file.</p>
-
     <footer>© National Motors — Eng.Ahmed Salah IT-Team</footer>
   </div>
 
@@ -459,7 +448,7 @@
       });
 
       // Select all the main sections of the page to be animated
-      const elementsToAnimate = document.querySelectorAll('.main-header, .overview, .contacts, .list, .rich, .qr-note, footer');
+      const elementsToAnimate = document.querySelectorAll('.main-header, .overview, .contacts, .list, .rich, footer');
       elementsToAnimate.forEach(el => {
         observer.observe(el);
       });
